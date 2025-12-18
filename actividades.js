@@ -12,7 +12,7 @@ const precioFinalConIVA = (precio, iva) => precio + (precio * iva / 100);
 console.log("El precio final con IVA es:", precioFinalConIVA(precio, iva));
 */
 /*** Ejercicio 2: Calcular promedio de calificaciones. Solicita al usuario cinco calificaciones y usa una función flecha para calcular el promedio.***/
-
+/*
 let nota1 = Number(prompt("Ingresá la primera calificación: "));
 let nota2 = Number(prompt("Ingresá la segunda calificación: "));
 let nota3 = Number(prompt("Ingresá la tercera calificación: "));
@@ -24,4 +24,24 @@ const calcularPromedio = (n1, n2, n3, n4, n5) => (n1 + n2 + n3 + n4 + n5) / 5;
 let promedio = calcularPromedio(nota1, nota2, nota3, nota4, nota5);
 
 console.log("El promedio es:", promedio);
+*/
+/*** Ejercicio 3: Clasificación de edades
+Solicita al usuario una edad y usa una función flecha para clasificarla en niño, adolescente, adulto o adulto mayor.***/
 
+const clasificarEdad = (edad) => {
+    if (edad >= 0 && edad <= 12) {
+        return "Niño";
+    } else if (edad >= 13 && edad <= 17) {
+        return "Adolescente";
+    } else if (edad >= 18 && edad <= 64) {
+        return "Adulto";
+    } else if (edad >= 65) {
+        return "Adulto mayor";
+    } else {
+        return "Edad inválida";
+    }
+};
+
+let edadUsuario = parseInt(prompt("Ingrese una edad: "));
+
+console.log(clasificarEdad(edadUsuario));
