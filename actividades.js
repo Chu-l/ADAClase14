@@ -27,7 +27,7 @@ console.log("El promedio es:", promedio);
 */
 /*** Ejercicio 3: Clasificación de edades
 Solicita al usuario una edad y usa una función flecha para clasificarla en niño, adolescente, adulto o adulto mayor.***/
-
+/*
 const clasificarEdad = (edad) => {
     if (edad >= 0 && edad <= 12) {
         return "Niño";
@@ -43,5 +43,23 @@ const clasificarEdad = (edad) => {
 };
 
 let edadUsuario = parseInt(prompt("Ingrese una edad: "));
-
 console.log(clasificarEdad(edadUsuario));
+*/
+/*** Ejercicio 4: Calcular descuento por cantidad
+Solicita al usuario la cantidad de productos comprados y el precio unitario. Usa una función flecha para calcular el total con descuento según la cantidad. ***/
+
+const calcularTotal = (cantidad, precio) => {
+    let descuento = 0;
+    if (cantidad >= 0 && cantidad < 5) {
+        ;
+    } else if (cantidad >= 5 && cantidad < 10) {
+        ;
+    } else {
+        ;
+    }
+};
+
+let cantidad = parseInt(prompt("Ingrese la cantidad de productos: "));
+let precio = parseInt(prompt("Ingrese el precio unitario: "));
+
+console.log("Total con descuento: $" + calcularTotal(cantidad, precio));
