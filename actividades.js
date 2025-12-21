@@ -47,7 +47,7 @@ console.log(clasificarEdad(edadUsuario));
 */
 /*** Ejercicio 4: Calcular descuento por cantidad
 Solicita al usuario la cantidad de productos comprados y el precio unitario. Usa una función flecha para calcular el total con descuento según la cantidad. ***/
-
+/*
 const calcularTotal = (cantidad, precio) => {
     let descuento = 0;
     if (cantidad >= 0 && cantidad < 5) {
@@ -65,3 +65,22 @@ let cantidad = parseInt(prompt("Ingrese la cantidad de productos: "));
 let precio = parseInt(prompt("Ingrese el precio unitario: "));
 
 console.log("Total con descuento: $" + calcularTotal(cantidad, precio));
+*/
+/*** Ejercicio 5: Verificar origen del auto
+Solicita al usuario ingresar la marca de un auto y utiliza una función flecha para verificar y mostrar si el auto es de origen nacional o importado. Considera que solo los autos de marcas "Chevrolet", "Ford" y "Fiat" son de origen nacional.
+✔	Solicita al usuario que ingrese la marca de un auto.
+✔	Utiliza una función flecha para determinar si la marca ingresada corresponde a un auto de origen nacional o importado.
+✔	Muestra un mensaje indicando si el auto es de origen nacional o importado, basado en la marca ingresada por el usuario.
+  ***/
+
+const origenAuto = (marcaAuto) => {
+    if (marcaAuto === "CHEVROLET" || marcaAuto === "FORD" || marcaAuto === "FIAT") {
+        console.log("El auto es de origen nacional");
+    } else {
+        console.log("El auto es de origen importado");
+    }
+};
+
+let marca = prompt("Ingrese la marca del auto: ").toUpperCase();
+
+origenAuto(marca);
