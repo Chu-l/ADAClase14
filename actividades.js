@@ -72,7 +72,7 @@ Solicita al usuario ingresar la marca de un auto y utiliza una función flecha p
 ✔	Utiliza una función flecha para determinar si la marca ingresada corresponde a un auto de origen nacional o importado.
 ✔	Muestra un mensaje indicando si el auto es de origen nacional o importado, basado en la marca ingresada por el usuario.
   ***/
-
+/*
 const origenAuto = (marcaAuto) => {
     if (marcaAuto === "CHEVROLET" || marcaAuto === "FORD" || marcaAuto === "FIAT") {
         console.log("El auto es de origen nacional");
@@ -84,3 +84,32 @@ const origenAuto = (marcaAuto) => {
 let marca = prompt("Ingrese la marca del auto: ").toUpperCase();
 
 origenAuto(marca);
+*/
+/*** Ejercicio 6: El deportista
+Para este ejercicio deberán definir un objeto literal “deportista”, con los siguientes atributos: nombre, energía, experiencia.
+Ademas queremos poder pedirle al deportista que entrene. Para esto, nuestro trabajo va a ser realizar una función “entrenarHoras.”
+La función entrenarHoras tiene las siguientes tres características:
+✔	Recibe por parámetro la cantidad de horas.
+✔	Resta a su energía (this.energia) la cantidad de horas x 5.
+✔	Incrementa su experiencia (this.experiencia) la cantidad de horas x 2.
+Una vez definida la función, podemos ejecutar el código y ver cómo va variando la energía y experiencia del deportista por consola. ***/
+
+let deportista = {
+    nombre: 'Candela',
+    energia: 100,
+    experiencia: 10,
+    entrenarHoras: function(horas) {
+        this.energia -= horas * 5;
+        this.experiencia += horas * 2;
+    }
+};
+
+console.log("Energía inicial: " + deportista.energia);
+console.log("Experiencia inicial: " + deportista.experiencia);
+
+deportista.entrenarHoras(3);
+
+console.log("***Despues de 3 horas de entrenamiento***")
+
+console.log("Energía final: " + deportista.energia);      
+console.log("Experiencia final: " + deportista.experiencia); 
