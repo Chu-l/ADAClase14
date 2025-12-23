@@ -93,7 +93,7 @@ La función entrenarHoras tiene las siguientes tres características:
 ✔	Resta a su energía (this.energia) la cantidad de horas x 5.
 ✔	Incrementa su experiencia (this.experiencia) la cantidad de horas x 2.
 Una vez definida la función, podemos ejecutar el código y ver cómo va variando la energía y experiencia del deportista por consola. ***/
-
+/*
 let deportista = {
     nombre: 'Candela',
     energia: 100,
@@ -113,3 +113,31 @@ console.log("***Despues de 3 horas de entrenamiento***")
 
 console.log("Energía final: " + deportista.energia);      
 console.log("Experiencia final: " + deportista.experiencia); 
+*/
+/*** Ejercicio 7: Libros
+Define dos objetos libro1 y libro2 con las siguientes propiedades y valores:
+✔	título: una cadena con el título del libro.
+✔	autor: una cadena con el nombre del autor del libro.
+✔	anioPublicacion: un número con el año de publicación del libro.
+Luego, crea una función llamada mostrarLibro que tome un arreglo de libros como parámetro y muestre por consola la información de cada libro en el formato especificado. ***/
+
+let libro1 = {
+    titulo: 'Ciclo Pendragon',
+    autor: 'Stephen R. Lawhead',
+    anioPublicacion: 1987
+};
+let libro2 = {
+    titulo: 'Los Pilares de la Tierra',
+    autor: 'Ken Follett',
+    anioPublicacion: 1989
+};
+
+function mostrarLibro(libros) {
+    for (let i = 0; i < libros.length; i++) {
+        console.log(
+            "Título: " + libros[i].titulo + " | Autor: " + libros[i].autor + " | Año de publicación: " + libros[i].anioPublicacion);
+    }
+};
+
+let biblioteca = [libro1, libro2];
+mostrarLibro(biblioteca);
