@@ -120,7 +120,7 @@ Define dos objetos libro1 y libro2 con las siguientes propiedades y valores:
 ✔	autor: una cadena con el nombre del autor del libro.
 ✔	anioPublicacion: un número con el año de publicación del libro.
 Luego, crea una función llamada mostrarLibro que tome un arreglo de libros como parámetro y muestre por consola la información de cada libro en el formato especificado. ***/
-
+/*
 let libro1 = {
     titulo: 'Ciclo Pendragon',
     autor: 'Stephen R. Lawhead',
@@ -141,3 +141,27 @@ function mostrarLibro(libros) {
 
 let biblioteca = [libro1, libro2];
 mostrarLibro(biblioteca);
+*/
+/*** Ejercicio 8: Funcion backEnd()
+Creá la función backEnd() que recibirá 2 números como parámetros. La función deberá imprimir por pantalla los números del 1 al 100, pero teniendo en cuenta los siguientes criterios:
+✔	Si el número a imprimir es múltiplo del primer parámetro que se ingresó, deberá mostrar el string “Back” en lugar del número.
+✔	Si el número a imprimir es múltiplo del segundo parámetro ingresado, deberá mostrar el string “End” en su lugar del número.
+✔	Si el número a imprimir es múltiplo de ambos parámetros, deberá mostrar el string “Back End” en lugar del número.***/
+
+function backend(num1, num2) {
+    for (i=0; i<=100; i++) {
+        if (i % num1 === 0 && i % num2 === 0) {
+            console.log("Back End");
+        } else if (i % num1 === 0) {
+            console.log("Back");
+        } else if (i % num2 === 0) {
+            console.log("End");
+        } else {
+            console.log(i);
+        }
+    }
+};
+
+backend(6, 8);
+
+
