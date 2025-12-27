@@ -172,7 +172,7 @@ Funcionalidad:
 ✔	Debes recorrer el array de manera manual para encontrar la última aparición del modelo.
 ✔	Si el modelo se encuentra en el array, la función debe imprimir por consola la posición (índice + 1) en la que aparece (considerando que la numeración es de 1 a N).
 ✔	Si el modelo no está en el array, debe imprimir un mensaje indicando que el modelo no está presente.***/
-
+/*
 let modelosAutos = ["Gol", "Chevrolet", "Ford","Fiat", "Dodge", "Falcon", "BMW", "Porsche", "Fiat", "Gol"];
 
 function ultimaAparicionModeloAuto(modelo) {
@@ -191,3 +191,27 @@ function ultimaAparicionModeloAuto(modelo) {
     }
 }
 ultimaAparicionModeloAuto("Fiat");
+*/
+/*** Ejercicio 10: Flores Favoritas
+Escribe un programa en JavaScript para contar cuántas veces el usuario menciona sus flores favoritas. Realiza las siguientes acciones:
+1.	Inicializa un array vacío para almacenar las flores favoritas.
+2.	Pregunta al usuario por sus tres flores favoritas utilizando prompt y agrega cada una al array manualmente (sin usar métodos como push).
+3.	Pregunta al usuario por una flor específica y verifica si está entre sus favoritas.
+4.	Muestra por consola cuántas de las flores favoritas se mencionaron (esto debe hacerse manualmente). ***/
+
+let floresFavoritas = [];
+floresFavoritas[0] = prompt("Escriba la primera flor favorita: ").toUpperCase();
+floresFavoritas[1] = prompt("Escriba la segunda flor favorita: ").toUpperCase();
+floresFavoritas[2] = prompt("Escriba la tercera flor favorita: ").toUpperCase();
+
+let florBuscar = prompt("Ingresa una flor para buscar: ").toUpperCase();
+let contador = 0;
+function buscarFlor (flor) {
+    for (let i=0; i<floresFavoritas.length; i++) {
+        if (floresFavoritas[i]===flor) {
+            contador ++
+        }
+    }
+};
+buscarFlor(florBuscar);
+console.log("Total de menciones: " + contador);
